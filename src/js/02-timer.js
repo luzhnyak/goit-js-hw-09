@@ -29,12 +29,11 @@ const spanDaysEl = document.querySelector('span[data-days]');
 const spanHoursEl = document.querySelector('span[data-hours]');
 const spanMinutesEl = document.querySelector('span[data-minutes]');
 const spanSecondsEl = document.querySelector('span[data-seconds]');
+const InputDateEl = document.querySelector('#datetime-picker');
+const btnStartEl = document.querySelector('button[data-start]');
 
-btnStartEl = document.querySelector('button[data-start]');
 btnStartEl.addEventListener('click', onStartClick);
 btnStartEl.disabled = true;
-
-const InputDateEl = document.querySelector('#datetime-picker');
 
 let selectedDate;
 
