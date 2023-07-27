@@ -28,7 +28,7 @@ function onCreateClick() {
   step = Number(inputStepEl.value);
   amount = Number(inputAmountEl.value);
 
-  console.log('Start create promise', amount);
+  console.log('Start create promise');
 
   for (let i = 1; i <= amount; i += 1) {
     createPromise(i, delay)
