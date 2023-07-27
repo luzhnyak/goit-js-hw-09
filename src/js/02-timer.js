@@ -25,19 +25,18 @@ function addLeadingZero(value) {
   return String(value).padStart(2, '0');
 }
 
-spanDaysEl = document.querySelector('span[data-days]');
-spanHoursEl = document.querySelector('span[data-hours]');
-spanMinutesEl = document.querySelector('span[data-minutes]');
-spanSecondsEl = document.querySelector('span[data-seconds]');
+const spanDaysEl = document.querySelector('span[data-days]');
+const spanHoursEl = document.querySelector('span[data-hours]');
+const spanMinutesEl = document.querySelector('span[data-minutes]');
+const spanSecondsEl = document.querySelector('span[data-seconds]');
 
 btnStartEl = document.querySelector('button[data-start]');
 btnStartEl.addEventListener('click', onStartClick);
 btnStartEl.disabled = true;
 
-InputDateEl = document.querySelector('#datetime-picker');
+const InputDateEl = document.querySelector('#datetime-picker');
 
 let selectedDate;
-let deltaDate;
 
 flatpickr(InputDateEl, {
   enableTime: true,
@@ -46,7 +45,8 @@ flatpickr(InputDateEl, {
   minuteIncrement: 1,
   onClose(selectedDates) {
     selectedDate = selectedDates[0].getTime();
-    deltaDate = selectedDate - Date.now();
+    const deltaDate = selectedDate - Date.now();
+
     if (deltaDate > 0) {
       btnStartEl.disabled = false;
     } else {
@@ -62,7 +62,8 @@ function onStartClick(event) {
   btnStartEl.disabled = true;
 
   const interval = setInterval(() => {
-    deltaDate = selectedDate - Date.now();
+    const deltaDate = selectedDate - Date.now();
+
     if (deltaDate >= 0) {
       const { days, hours, minutes, seconds } = convertMs(deltaDate);
 

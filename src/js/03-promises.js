@@ -16,17 +16,17 @@ function createPromise(position, delay) {
   });
 }
 
-inputDelayEl = document.querySelector('input[name="delay"]');
-inputStepEl = document.querySelector('input[name="step"]');
-inputAmountEl = document.querySelector('input[name="amount"]');
+const inputDelayEl = document.querySelector('input[name="delay"]');
+const inputStepEl = document.querySelector('input[name="step"]');
+const inputAmountEl = document.querySelector('input[name="amount"]');
 
 btnStartEl = document.querySelector('button');
 btnStartEl.addEventListener('click', onCreateClick);
 
 function onCreateClick() {
-  delay = Number(inputDelayEl.value);
-  step = Number(inputStepEl.value);
-  amount = Number(inputAmountEl.value);
+  let delay = Number(inputDelayEl.value);
+  const step = Number(inputStepEl.value);
+  const amount = Number(inputAmountEl.value);
 
   console.log('Start create promise');
 
