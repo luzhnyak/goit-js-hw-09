@@ -30,6 +30,7 @@ function onCreateClick() {
 
   console.log('Start create promise');
   console.log('Start create promise');
+  console.log('Start create promise');
 
   for (let i = 1; i <= amount; i += 1) {
     createPromise(i, delay)
