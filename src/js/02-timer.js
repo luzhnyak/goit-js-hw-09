@@ -50,7 +50,6 @@ flatpickr(InputDateEl, {
     if (deltaDate > 0) {
       btnStartEl.disabled = false;
     } else {
-      // alert('Please choose a date in the future');
       Notiflix.Notify.failure('Please choose a date in the future');
       btnStartEl.disabled = true;
     }

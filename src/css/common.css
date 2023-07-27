@@ -20,12 +20,7 @@ img {
 .timer {
   display: flex;
   margin-top: 15px;
-  gap: 10px;
-}
-
-.field {
-  border: #212121 1px solid;
-  padding: 4px;
+  gap: 15px;
 }
 
 .field span {

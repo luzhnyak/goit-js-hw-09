@@ -11,10 +11,9 @@ btnStartEl.addEventListener('click', onStartClick);
 btnStopEl.addEventListener('click', onStopClick);
 btnStopEl.disabled = true;
 
-let interval;
+let interval = null;
 
 function onStartClick(event) {
-  console.log('Start interval');
   btnStartEl.disabled = true;
   btnStopEl.disabled = false;
   interval = setInterval(() => {
@@ -23,7 +22,6 @@ function onStartClick(event) {
 }
 
 function onStopClick(event) {
-  console.log('Stop interval');
   btnStartEl.disabled = false;
   btnStopEl.disabled = true;
   clearInterval(interval);
